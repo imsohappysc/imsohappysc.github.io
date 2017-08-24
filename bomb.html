@@ -76,7 +76,7 @@
                 window.count = 0;
                 window.a = parseInt(players.value);
 
-                for(i=0;i<10;i++){
+                for(i=0;i<11;i++){
                     document.getElementById("A"+i).className="disable";
                 }
                 for(i=0;i<a+1;i++){
@@ -96,7 +96,7 @@
                 window.count = 0;
                 //window.a = parseInt(players.value);
 
-                for(i=0;i<10;i++){
+                for(i=0;i<11;i++){
                     document.getElementById("A"+i).className="disable";
                 }
                 for(i=0;i<a+1;i++){
@@ -116,10 +116,10 @@
                     document.getElementById("image").src="img1.jpg";
                     document.getElementById("text").innerHTML=document.getElementById("A"+select).innerHTML+"爆炸";
 
-                    for(i=0;i<10;i++){
-                        //if(i!=select){
+                    for(i=0;i<11;i++){
+                        
                         document.getElementById("A"+i).className="disable";
-                        //}
+                        
                     }
                 }else{
                     document.getElementById("A"+select).className="disable";
