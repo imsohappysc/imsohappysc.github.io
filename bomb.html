@@ -13,25 +13,27 @@
     .block{
         visibility: hidden;
     }
+    .visible{
+        visibility: visible;
+    }
     .size{
-        width:20%;height:36px;font-size:20px
+        width:40%;height:3rem;font-size:24px;
     }
-    .size2{
-        width:19%;height:36px;font-size:20px
-    }
-    .btn{
-        width:100%;
+    .body{
+        width:80%;
     }
     </style>
 </head>
 
 <body>
-<div style="display: block">
-    <h2 id=text></h2>
+<center/>
+
+<div class="body">
+    <h2 id=text class="block">default</h2>
 </div>
-    <div>
-        
-        <img class="block" id="image" src="img0.jpg" width="200px" height="200px">
+
+    <div class="body">
+        <img class="" id="image" src="img0.jpg" width="250px" height="200px">
         <h3>Players</h3>
         
         <select class="size" name="" id="players">
@@ -45,24 +47,26 @@
             <option value="9">9</option>
             <option value="10">10</option>
         </select>
-        <button class="size" onclick="players()">確認</button>
-        
-    </div>        
-    <div class="btn">
+
+        <button class="size" onclick="players()">確認</button>  
+    </div>    
+
+    <div class="body">
         <h3>Choose</h3>
         <button class="disable" type="button" id="A0" value="0" onclick="C1(0)">A</button>
-        <button class="disable" type="button" id="A1" value="1" onclick="C1(1)">B</button>
+        <button class="disable" type="button" id="A1" value="1" onclick="C1(1)">B</button><br><br>
         <button class="disable" type="button" id="A2" value="2" onclick="C1(2)">C</button>
-        <button class="disable" type="button" id="A3" value="3" onclick="C1(3)">D</button>
+        <button class="disable" type="button" id="A3" value="3" onclick="C1(3)">D</button><br><br>
         <button class="disable" type="button" id="A4" value="4" onclick="C1(4)">E</button>
-        <button class="disable" type="button" id="A5" value="5" onclick="C1(5)">F</button>
+        <button class="disable" type="button" id="A5" value="5" onclick="C1(5)">F</button><br><br>
         <button class="disable" type="button" id="A6" value="6" onclick="C1(6)">G</button>
-        <button class="disable" type="button" id="A7" value="7" onclick="C1(7)">H</button>
+        <button class="disable" type="button" id="A7" value="7" onclick="C1(7)">H</button><br><br>
         <button class="disable" type="button" id="A8" value="8" onclick="C1(8)">I</button>
-        <button class="disable" type="button" id="A9" value="9" onclick="C1(9)">J</button>
+        <button class="disable" type="button" id="A9" value="9" onclick="C1(9)">J</button><br><br>
         <button class="disable" type="button" id="A10" value="10" onclick="C1(10)">K</button>
     </div>
 
+<!-- script -->
         <script>
             var bomb="";
             var count=0;
@@ -70,9 +74,10 @@
 
             var players = function(){
 
-                document.getElementById("text").innerHTML="";
+                document.getElementById("text").innerHTML="default";
 
                 var players = document.getElementById("players");
+                document.getElementById("text").className="block";
                 window.count = 0;
                 window.a = parseInt(players.value);
 
@@ -80,7 +85,7 @@
                     document.getElementById("A"+i).className="disable";
                 }
                 for(i=0;i<a+1;i++){
-                    document.getElementById("A"+i).className="enable size2";
+                    document.getElementById("A"+i).className="enable size";
                 }
 
                 document.getElementById("image").className="enable";
@@ -90,17 +95,14 @@
 
             var players2 = function(){
 
-                //document.getElementById("text").innerHTML="";
-
                 var players = document.getElementById("players");
                 window.count = 0;
-                //window.a = parseInt(players.value);
 
                 for(i=0;i<11;i++){
                     document.getElementById("A"+i).className="disable";
                 }
                 for(i=0;i<a+1;i++){
-                    document.getElementById("A"+i).className="enable size2";
+                    document.getElementById("A"+i).className="enable size";
                 }
 
                 document.getElementById("image").className="enable";
@@ -114,17 +116,17 @@
 
                 if(select==bomb){
                     document.getElementById("image").src="img1.jpg";
+                    document.getElementById("text").className="visible";
                     document.getElementById("text").innerHTML=document.getElementById("A"+select).innerHTML+"爆炸";
 
-                    for(i=0;i<11;i++){
-                        
+                    for(i=0;i<11;i++){       
                         document.getElementById("A"+i).className="disable";
-                        
                     }
                 }else{
                     document.getElementById("A"+select).className="disable";
                     window.count++;
                     if(count==a){
+                        document.getElementById("text").className="visible";
                         document.getElementById("text").innerHTML="再來一輪";
                         players2();
                     }
