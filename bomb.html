@@ -3,6 +3,14 @@
 
 <head>
     <title>拆炸彈</title>
+
+<!-- 最新編譯和最佳化的 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<!-- 選擇性佈景主題 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+<!-- 最新編譯和最佳化的 JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
     <style>
     .disable{
         display:none;
@@ -17,7 +25,12 @@
         visibility: visible;
     }
     .size{
-        width:40%;height:3rem;font-size:24px;
+        width:100%;height:4rem;font-size:24px;
+        margin: 1rem;
+    }
+    .confirm{
+        width:40%;height:4rem;font-size:24px;
+        margin: 10px;
     }
     .body{
         width:80%;
@@ -28,15 +41,15 @@
 <body>
 <center/>
 
-<div class="body">
-    <h2 id=text class="block">default</h2>
-</div>
+    <div class="body">
+       <h2 id=text class="block">default</h2>
+    </div>
 
     <div class="body">
-        <img class="" id="image" src="img0.jpg" width="250px" height="200px">
+        <img  id="image" src="img0.jpg" width="30%">
         <h3>Players</h3>
         
-        <select class="size" name="" id="players">
+        <select class="confirm" name="" id="players">
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -48,21 +61,21 @@
             <option value="10">10</option>
         </select>
 
-        <button class="size" onclick="players()">確認</button>  
+        <button class="confirm btn-success" onclick="players()">確認</button>  
     </div>    
 
     <div class="body">
         <h3>Choose</h3>
-        <button class="disable" type="button" id="A0" value="0" onclick="C1(0)">A</button>
-        <button class="disable" type="button" id="A1" value="1" onclick="C1(1)">B</button><br><br>
-        <button class="disable" type="button" id="A2" value="2" onclick="C1(2)">C</button>
-        <button class="disable" type="button" id="A3" value="3" onclick="C1(3)">D</button><br><br>
-        <button class="disable" type="button" id="A4" value="4" onclick="C1(4)">E</button>
-        <button class="disable" type="button" id="A5" value="5" onclick="C1(5)">F</button><br><br>
-        <button class="disable" type="button" id="A6" value="6" onclick="C1(6)">G</button>
-        <button class="disable" type="button" id="A7" value="7" onclick="C1(7)">H</button><br><br>
-        <button class="disable" type="button" id="A8" value="8" onclick="C1(8)">I</button>
-        <button class="disable" type="button" id="A9" value="9" onclick="C1(9)">J</button><br><br>
+        <button class="disable" type="button" id="A0" value="0" onclick="C1(0)">A</button><br>
+        <button class="disable" type="button" id="A1" value="1" onclick="C1(1)">B</button><br>
+        <button class="disable" type="button" id="A2" value="2" onclick="C1(2)">C</button><br>
+        <button class="disable" type="button" id="A3" value="3" onclick="C1(3)">D</button><br>
+        <button class="disable" type="button" id="A4" value="4" onclick="C1(4)">E</button><br>
+        <button class="disable" type="button" id="A5" value="5" onclick="C1(5)">F</button><br>
+        <button class="disable" type="button" id="A6" value="6" onclick="C1(6)">G</button><br>
+        <button class="disable" type="button" id="A7" value="7" onclick="C1(7)">H</button><br>
+        <button class="disable" type="button" id="A8" value="8" onclick="C1(8)">I</button><br>
+        <button class="disable" type="button" id="A9" value="9" onclick="C1(9)">J</button><br>
         <button class="disable" type="button" id="A10" value="10" onclick="C1(10)">K</button>
     </div>
 
@@ -70,7 +83,7 @@
         <script>
             var bomb="";
             var count=0;
-            var a=0;
+            var a=0; //紀錄人數
 
             var players = function(){
 
@@ -85,7 +98,7 @@
                     document.getElementById("A"+i).className="disable";
                 }
                 for(i=0;i<a+1;i++){
-                    document.getElementById("A"+i).className="enable size";
+                    document.getElementById("A"+i).className="enable size btn-danger";
                 }
 
                 document.getElementById("image").className="enable";
@@ -102,16 +115,14 @@
                     document.getElementById("A"+i).className="disable";
                 }
                 for(i=0;i<a+1;i++){
-                    document.getElementById("A"+i).className="enable size";
+                    document.getElementById("A"+i).className="enable size btn-danger";
                 }
 
                 document.getElementById("image").className="enable";
                 document.getElementById("image").src="img0.jpg";
                 window.bomb = parseInt((a+1)*Math.random())
             }
-        </script>
 
-        <script>
             var C1 = function(select){
 
                 if(select==bomb){
