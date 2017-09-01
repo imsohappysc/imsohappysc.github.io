@@ -38,6 +38,10 @@
     .body{
         width:90%;
     }
+    .img{
+        width: 30%;
+        max-width:180px;
+    }
     </style>
 </head>
 
@@ -49,7 +53,7 @@
     </div>
 
     <div>
-        <img  id="image" src="img0.jpg" width="30%">
+        <img class="img" id="image" src="img0.jpg">
     </div>
     <div class="body">
         <h3>Players</h3>
@@ -106,7 +110,7 @@
                     document.getElementById("A"+i).className="enable size btn-danger";
                 }
 
-                document.getElementById("image").className="enable";
+                //document.getElementById("image").className="enable";
                 document.getElementById("image").src="img0.jpg";
                 window.bomb = parseInt((a+1)*Math.random())
             }
@@ -123,7 +127,7 @@
                     document.getElementById("A"+i).className="enable size btn-danger";
                 }
 
-                document.getElementById("image").className="enable";
+                //document.getElementById("image").className="enable";
                 document.getElementById("image").src="img0.jpg";
                 window.bomb = parseInt((a+1)*Math.random())
             }
