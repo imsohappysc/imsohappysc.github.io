@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost/shop/ -->
+<html lang="zh-tw"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Shop Index</title>
+	
+<!-- 最新編譯和最佳化的 CSS -->
+<link rel="stylesheet" href="./Shop Index_files/bootstrap.min.css">
+<!-- 選擇性佈景主題 -->
+<link rel="stylesheet" href="./Shop Index_files/bootstrap-theme.min.css">
+<!-- 下拉選單JS -->
+<script src="./Shop Index_files/jquery.min.js.下載"></script>
+<!-- 最新編譯和最佳化的 JavaScript -->
+<script src="./Shop Index_files/bootstrap.min.js.下載"></script>
+
+<!-- baibao -->
+<link rel="stylesheet" type="text/css" media="screen" href="./Shop Index_files/main.css">
+
+
+      
+
+     
+      
+
+</head>
+<body>
+<!-- 最上面那條 -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse top_message">
+                <ul class="nav navbar-nav navbar-right ">
+                    <li class="text-right">
+                        <button type="button" class="btn btn-danger go_shop" onclick="location.href=&#39;#b&#39;"><i class="fa fa-hand-o-right" aria-hidden="true"></i> 直接購買</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- 最上面那條 -->
+
+
+<h1>歡迎光臨，這裡是 咪蓮雜貨鋪 。</h1>
+
+<!-- YouTube影片 -->
+    <div class="content-section-fluid">
+        <div class="container-fluid container-fluid—spec iframe_spec" style="background-color:#ffffff">
+            <div style="text-align:center">
+                <div>
+                    <div style="position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden;">
+                        <iframe allowfullscreen="" frameborder="0" height="360" src="./Shop Index_files/hH6sPtUx5Ko.html" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" width="640"></iframe>
+                    </div>
+                </div>
+                <br>
+            <div style="text-align:center"> </div>
+        </div>
+    </div>
+
+<!-- YouTube影片 -->
+
+<!-- 商品顯示迴圈 --><a id="b"></a>
+<div class="container">
+    <div class="row">
+        <div class="section-title_box text-center">
+            <h4 class="section-title2">商品清單選購</h4> </div>
+
+
+
+<form action="http://localhost/shop/index.php" method="post">
+        <div class="col-md-12 ">
+            <div class="row">
+                <div class="col-md-10 col-sm-10 col-md-push-2 col-xs-push-0 product_title_css">
+                    <h4><span class="text-danger">(限時優惠) </span> <strong>礦泉水</strong> <span class="text-primary initialism"><br>限量99組</span> <small class="text-muted">限時倒數優惠</small> </h4>
+                    <p>
+                        <del>  原本售價 1000 元 </del>
+                        <font class="product_new_price"> 現在特價 500 元</font>
+                    </p>
+                </div>
+                
+                <input type="hidden" size="5" name="Item" value="10">
+
+                <div class="col-md-2 col-sm-2 col-md-pull-10 col-xs-push-0 list_button"> <input type="submit" class="btn btn-block submit btn-success add_car_one btn-lg" value="訂購"></div>
+                
+            </div>
+            數量 : <input type="text" size="5" name="Quantity" value="1">個
+            <hr> 
+        </div>
+</form>
+
+<form action="http://localhost/shop/index.php" method="post">
+        <div class="col-md-12 ">
+            <div class="row">
+                <div class="col-md-10 col-sm-10 col-md-push-2 col-xs-push-0 product_title_css">
+                    <h4><span class="text-danger">(限時優惠) </span> <strong>指尖陀螺</strong> <span class="text-primary initialism"><br>限量100個</span> <small class="text-muted">趕快搶購</small> </h4>
+                    <p>
+                        <del>  原本售價 150 元 </del>
+                        <font class="product_new_price"> 現在特價 99 元</font>
+                    </p>
+                </div>
+                
+                <input type="hidden" size="5" name="Item" value="26">
+
+                <div class="col-md-2 col-sm-2 col-md-pull-10 col-xs-push-0 list_button"> <input type="submit" class="btn btn-block submit btn-success add_car_one btn-lg" value="訂購"></div>
+                
+            </div>
+            數量 : <input type="text" size="5" name="Quantity" value="1">個
+            <hr> 
+        </div>
+</form>
+
+
+
+    </div>
+</div>
+
+<!-- 商品顯示迴圈 -->
+
+<!-- 訂單區 -->
+
+    <div id="shopping_box" class="container" data-o="N">
+        <div class="row text-center">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="section-title_box text-center">
+                    <h4 class="section-title2">目前已選購商品</h4>
+                    <h3 style="color:red;"><p></p>
+                    </h3></div>
+<!-- 選購Table -->
+<table border="0" class="table">
+  <tbody><tr bgcolor="#CC99FF">
+   <td>功能</td>
+   <td>編號</td>
+   <td>名稱</td>
+   <td>價格</td>
+   <td>數量</td>
+  </tr>
+
+</tbody></table>
+
+
+
+<!-- 選購Table -->
+
+                <div class="area-loading" id="shopping_list1"></div>
+            </div>
+        </div>
+    </div><a id="c"></a>
+
+<!-- 訂單資料填寫 -->  
+<center>
+<div class="panel panel-warning" style="width:90%">
+  <div class="panel-heading">
+    <h3 class="panel-title"><strong>訂單資料填寫</strong></h3>
+  </div>
+
+  <div class="panel-body">
+      <form id="form1" name="form1" method="post" action="http://localhost/shop/insert_order.php" class="form-group" role="form">
+
+      <h5>真實姓名</h5><p style="color:red;"></p>
+      <input name="rec_name" type="text" placeholder="請輸入真實姓名" class="form-control" value="">
+
+      <h5>聯絡電話</h5><p style="color:red;"></p>
+      <input name="rec_cellphone" type="text" placeholder="請輸入聯絡電話" class="form-control" value="">
+      
+      <h5>收件地址</h5><p style="color:red;"></p>
+      <input name="rec_address" type="text" placeholder="請輸入收件地址" class="form-control" value="">
+
+      <h5>收貨時間</h5>
+      <select name="rec_time" class="form-control">
+      <option value="中午以前">中午以前</option> 
+      <option value="12-17點2">12-17點</option> 
+      <option value="17-19點">17-19點</option>      
+      </select>
+
+      <h5>訂單備註</h5>
+      <input name="rec_note" type="text" placeholder="請輸入訂單備註" class="form-control">
+
+      <br><br><input name="submit" type="submit" value="送出訂單" class="btn btn-danger btn-lg">
+
+      <input name="order_number" type="hidden" value="G2017091517184950229">
+      <input name="order_status" type="hidden" value="待處理">
+      <input name="payment_method" type="hidden" value="貨到付款">
+      <input name="payment_amount" type="hidden" value="0">
+      <input name="payment_status" type="hidden" value="未付款">
+            <input type="hidden" name="order_product" value="">
+
+
+      </form>
+  </div>
+</div>
+</center>
+<!-- 訂單資料填寫 -->  
+
+<!-- 訂單區 -->
+<br><br><br><br>
+
+
+
+</div></body></html>
