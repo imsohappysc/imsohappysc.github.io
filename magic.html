@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css</title>
+	<style>
+		.frame{
+			margin-top: 150px;
+			width: 1280px;
+			height: 480px;
+			/*border: 5px solid black;*/
+			padding: 5px;
+			overflow:auto;
+			text-align: center;
+		}
+		.css{
+			/*height: 100px;*/
+			/*width: 100px;*/
+			position:absolute;
+			/*box-shadow: 0 0px 10px #0000FF inset,0 0 20px #0000FF;*/
+			/*background-color: red;*/
+			/*border-radius: 50%;*/
+		}
+		/*------原始位置------*/
+		.position1{margin-left: 0px;-webkit-animation: action1 10s infinite;}
+		.position2{margin-left: 1180px;-webkit-animation: action2 10s infinite;}
+		.position3{margin-top: 380px;-webkit-animation: action3 10s infinite;}
+		/*.position4{margin-left: 1180px;margin-top: 380px;}*/
+		/*------動作------*/
+		@-webkit-keyframes action1{
+			0%{margin-left: 0px;margin-top: 0px;}
+			20%{margin-left: 590px;margin-top: 190px;}
+			40%{margin-left: 590px;margin-top: 190px;opacity: 100;}
+			60%{margin-left: 590px;margin-top: 190px;opacity: 0;}
+			80%{margin-left: 590px;margin-top: 190px;opacity: 0;}
+			100%{margin-left: 590px;margin-top: 190px;opacity: 0;}
+		}
+		@-webkit-keyframes action2{
+			0%{margin-left: 1180px;margin-top: 0px;}
+			20%{margin-left: 1180px;margin-top: 0px;}
+			40%{margin-left: 560px;margin-top: 160px;}
+			60%{margin-left: 560px;margin-top: 160px;}
+			80%{margin-left: 560px;margin-top: 160px;}
+			100%{margin-left: 1180px;margin-top: 0px;}
+		}
+		@-webkit-keyframes action3{
+			0%{margin-left: 0px;margin-top: 380px;}
+			20%{margin-left: 0px;margin-top: 380px;}
+			40%{margin-left: 0px;margin-top: 380px;}
+			60%{margin-left: 590px;margin-top: 190px;}
+			80%{margin-left: 0px;margin-top: 380px;}
+			100%{margin-left: 0;margin-top: 380px;}
+		}
+	</style>
+</head>
+<body background="bg.png">
+	<div class="frame">
+		<div class="css position1"><img src="img1.png"></div>
+		<div class="css position2"><img src="img2.png"></div>
+		<div class="css position3"><img src="img3.png"></div>
+	</div>
+</body>
+</html>
